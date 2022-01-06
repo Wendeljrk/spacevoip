@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nvoip</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type='text/javascript' src="main.js"></script>
+    <link rel='stylesheet' href='style.css'>
+    <link rel="icon" type="image/x-icon" href="">
+
+</head>
+<body page='lista'>
+   
+    <nav id="menu">
+        <ul>
+            <li><img src="logo.png" width="200" href="index.html"></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="#">Sobre</a></li>
+        </ul>
+    </nav>
+
+
+    
+    <div id='listaRegistros'>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CPF</th>
+                    <th>Nome</th>
+                    <th>Fone</th>
+                    <th>Interação</th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="visualizar('cadastro', true)">Novo Cliente</button>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro' method="post" action="envia.php">
+
+        <div class='label'>
+            <div>ID</div>
+            <div>
+                <input type='number' readonly id='id' />
+            </div>
+        </div>
+        
+        <div class='label'>
+            <div>CPF</div>
+            <div>
+                <input required type='number' id='cpf' />
+            </div>
+
+        </div>
+
+        <div class='label'>
+            <div>Nome</div>
+            <div>
+                <input required id='nome' />
+            </div>
+        </div>
+
+        <div class='label'>
+            <div>Fone</div>
+            <div>
+                
+                <input required type='tel' minlength="10" maxlength="11" id='fone' />
+            </div>
+        </div>
+       
+        <div>
+            <button>Salvar</button>
+            <button onclick="visualizar('lista')" class="cinza" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+    
+    
+
+  
+    
+    
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">
+                &times;
+            </span>
+            <form id="sms_text" method="POST" action="envia.php">
+                <div>Confirme o celular</div>
+                <div>
+                <input required type="tel" minlength="11" maxlength="11" name="celular" size="15">
+                </div>
+                <div>Digite sua mensagem: </div>
+                <div>
+                <input required type="textarea"  size="15" maxlength="160" name="sms">
+                </div>
+                <button type="submit">Enviar </button>
+              </form>
+        </div>
+    </div>
+</body>
+</html>
