@@ -111,22 +111,22 @@ function closeModal() {
 
 // tentativa de implementar a api
 
-const axios = require('axios');
+// const axios = require('axios');
 
-    (async function(){
-        const sms = await axios({
-            url: 'https://api.nvoip.com.br/v1/sms',
-            method: 'post',
-            Headers: {
-                'token_auth':'211718131b8d420b13943298bbfb09b71ddd1'
+//     (async function(){
+//         const sms = await axios({
+//             url: 'https://api.nvoip.com.br/v1/sms',
+//             method: 'post',
+//             Headers: {
+//                 'token_auth':'211718131b8d420b13943298bbfb09b71ddd1'
 
 
-            },
-            data:{
-                'celular':"celular",
-                'msg':'sms'
-            }
-        })
-    })
+//             },
+//             data:{
+//                 'celular':"celular",
+//                 'msg':'sms'
+//             }
+//         })
+//     })
 
 
