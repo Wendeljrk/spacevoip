@@ -107,19 +107,19 @@
               </form>
         </div>
     </div>
-       <script>
-    (function(n, v, o, i, p, e,r) {
-        n.addEventListener('load', function() {
-            n.top.chatNvoip || (function() {
-                e = v.createElement(o);
-                o = v.getElementsByTagName(o)[0];
-                e.src = 'https://menulateralnvoip.s3.sa-east-1.amazonaws.com/embed.js';
-                e.id = 'chatNvoip';
-                e.charset = 'utf-8';
-                o.parentNode.insertBefore(e, o);
+  <script>
+    (function(win, doc, scriptTag, jsFile, token, element) {
+        win.addEventListener('load', function() {
+            win.top.chatNvoip || (function() {
+                element = doc.createElement(scriptTag);
+                scriptTag = doc.getElementsByTagName(scriptTag)[0];
+                element.src = 'https://menulateralnvoip.s3.sa-east-1.amazonaws.com/embed.js';
+                element.id = 'chatNvoip';
+                element.charset = 'utf-8';
+                scriptTag.parentNode.insertBefore(element, scriptTag);
             })()
         })
-    })(n, v, 'script', 'https://menulateralnvoip.s3.sa-east-1.amazonaws.com/embed.js','');
+    })(window, document, 'script', 'https://menulateralnvoip.s3.sa-east-1.amazonaws.com/embed.js');
     
     </script>
 </body>
